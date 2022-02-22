@@ -11433,3 +11433,102 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+/* Scroll Animation (sa, 스크롤 애니메이션) */
+.sa {
+  opacity: 0;
+  transition: all .5s ease;
+}
+
+/* 아래에서 위로 페이드 인 */
+.sa-up {
+  transform: translate(0, 100px);
+}
+
+.sa.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* loading */
+.loading {
+  position:fixed;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  background:rgba(0,0,0,0.6);
+  z-index:100;
+}
+
+.loading__image {
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-40px;
+  margin-top:-40px;
+  border: 12px solid #bd5d38;
+  /* Light grey */
+  border-top: 12px solid #f3f3f3;
+  /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes
+spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12rem 2rem;
+  color: white;
+  background-image: linear-gradient(to bottom, white 0%, #d48a6e 100%), url("https://source.unsplash.com/random/1920x1080/?sky");
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.hero h1 {
+  color : floralwhite;
+  font : italic bold 20px sans-serif;
+}
+
+.mouse {
+  max-width: 2.5rem;
+  width: 100%;
+  height: auto;
+}
+
+.scroll {
+  animation-name: scroll;
+  animation-duration: 1.5s;
+  animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+  animation-iteration-count: infinite;
+  transform-origin: 50% 20.5px;
+  will-change: transform, opacity;
+  opacity: 1;
+}
+
+.scroll-link {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes scroll {
+  0%, 20% {
+    transform: translateY(0) scaleY(1);
+  }
+  100% {
+    transform: translateY(36px) scaleY(2);
+    opacity: 0;
+  }
+}

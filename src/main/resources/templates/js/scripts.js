@@ -32,3 +32,32 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// Scroll Animation (sa, 스크롤 애니메이션)
+const saTriggerMargin = 300;
+const saElementList = document.querySelectorAll('.sa');
+
+const saFunc = function() {
+    for (const element of saElementList) {
+        if (!element.classList.contains('show')) {
+            if (window.innerHeight > element.getBoundingClientRect().top + saTriggerMargin) {
+                element.classList.add('show');
+            }
+        }
+    }
+}
+
+window.addEventListener('load', saFunc);
+window.addEventListener('scroll', saFunc);
+
+jQuery(document).ready(function($){
+
+    $('a.scroll-link').click(function(e){
+        e.preventDefault();
+        $id = $(this).attr('href');
+        $('body,html').animate({
+            scrollTop: $($id).offset().top
+        }, 750);
+    });
+
+});
