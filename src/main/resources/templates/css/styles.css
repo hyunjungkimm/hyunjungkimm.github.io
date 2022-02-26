@@ -5445,7 +5445,7 @@ textarea.form-control-lg {
 }
 
 .toast-container {
-  width: -webkit-max-content;
+  width: -webkt-max-content;
   width: -moz-max-content;
   width: max-content;
   max-width: 100%;
@@ -5477,16 +5477,20 @@ textarea.form-control-lg {
 }
 
 .modal {
-  position: fixed;
   top: 0;
-  left: 0;
-  z-index: 1055;
-  display: none;
-  width: 100%;
-  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  outline: 0;
+  max-width: 767px;
+}
+
+.modal-body{
+  width: 100%;
+  height: auto;
+}
+
+.modal a.close-modal {
+  top: 9.5px;
+  right: 7.5px;
 }
 
 .modal-dialog {
@@ -5581,7 +5585,20 @@ textarea.form-control-lg {
   position: relative;
   flex: 1 1 auto;
   padding: 1rem;
-}
+}/*
+.modal_body {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  transform: translateX(-50%) translateY(-50%);
+}*/
 
 .modal-footer {
   display: flex;

@@ -12,9 +12,14 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-
         <!-- Core theme CSS (includes Bootstrap)-->
+        <!--모달-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
         <link href="../templates/css/styles.css" rel="stylesheet" />
+
     </head>
     <body class="scrollLock" id="page-top">
         <!-- scroll rock class -->
@@ -197,7 +202,6 @@
                         </li>
                     </ul>
                 </div>
-                </div>
             </section>
             <hr class="m-0" />
             <!-- Experience-->
@@ -207,7 +211,7 @@
                     <h2 class="mb-5">Experience</h2>
                     <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
                     <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-                </div>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
@@ -219,7 +223,7 @@
                     <ul class="fa-ul mb-0">
                         <li class="open-popup">
                             <span class="fa-li"><i class="fa fa-hand-pointer text-warning"></i></span>
-                            <a href="../templates/modal/project.html" rel="modal:open">Google Analytics Certified Developer</a>
+                            <a href="../templates/modal/check.html" rel="modal:open">Google Analytics Certified Developer</a>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fa fa-hand-pointer text-warning"></i></span>
@@ -271,6 +275,8 @@
             window.onload = function(){
                 $('.loading').css('display','none') }
             //로딩 객체 제거 $('body').removeClass('scrollLock') //스크롤 락 제거
+
+
         </script>
     </body>
 </html>
