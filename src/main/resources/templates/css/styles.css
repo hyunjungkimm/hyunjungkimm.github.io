@@ -5477,10 +5477,9 @@ textarea.form-control-lg {
 }
 
 .modal {
-  top: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  max-width: 767px;
+  max-width: 800px;
 }
 
 .modal-body{
@@ -11548,4 +11547,8 @@ spin {
     transform: translateY(36px) scaleY(2);
     opacity: 0;
   }
+}
+
+.project-general-info{
+  list-style: none;
 }
